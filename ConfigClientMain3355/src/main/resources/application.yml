@@ -1,0 +1,19 @@
+#server:
+#  port: 3355
+#
+#spring:
+#  application:
+#    name: config-client
+#  cloud:
+#    config:
+#      label: master
+#      name: config
+#      profile: dev
+#      uri: http://localhost:3344
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+#  #eureka服务端的实例名称
+#  instance:
+#    hostname: eureka7002.com

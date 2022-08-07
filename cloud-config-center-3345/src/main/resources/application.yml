@@ -7,9 +7,11 @@ spring:
     config:
       server:
         git:
-          uri:  git@gitee.com:follow-your-heart-ding/springcloud.git
+          uri:  https://github.com/DRuiQ/git-deom.git
           search-paths:
              - springcloud
+          username: 1182830561@qq.com
+          password: dr820626
       label: master
 eureka:
   client:
