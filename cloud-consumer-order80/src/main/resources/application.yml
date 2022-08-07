@@ -1,0 +1,15 @@
+server:
+  port: 80
+spring:
+  application:
+    name: cloud-order-service  #服务名
+eureka:
+  client:
+    register-with-eureka: true #通过设置fetch-registry与register-with-eureka 表明自己是一个eureka服务
+    fetchRegistry: true
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka #集群版
+      #defaultZone: http://localhost:7001/eureka单机版
+    #fetch-registry: 检索服务选项，当设置为True(默认值)时，会进行服务检索,注册中心不负责检索服务。
+    #register-with-eureka: 服务注册中心也会将自己作为客户端来尝试注册自己,为true（默认）时自动生效
+    #eureka.client.serviceUrl.defaultZone是一个默认的注册中心地址。配置该选项后，可以在服务中心进行注册。
