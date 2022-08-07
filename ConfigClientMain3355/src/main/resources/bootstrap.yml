@@ -6,9 +6,9 @@ spring:
     name: config-client
   cloud:
     config:
-      label: master
-      name: config
-      profile: dev
+      label: master    #分支名
+      name: config     #文件名
+      profile: dev     #后缀名
       uri: http://localhost:3344
 eureka:
   client:
@@ -19,3 +19,9 @@ eureka:
   #eureka服务端的实例名称
   instance:
     hostname: eureka7001.com
+#暴露接口端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
