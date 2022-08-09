@@ -42,6 +42,11 @@ public class PaymentController {
             return new CommonResult(404,"没有查询到编号为"+id+"的用户",null);
         }
     }
+    @GetMapping("/payment/zipkin")
+    public String paymentZipkin()
+    {
+       return "aaaaaaaaaa";
+    }
 //    @GetMapping(value = "/payment/discoveryClient")
 //    public Object discoveryClient(){
 //        Set<String> allKnownRegions = discoveryClient.getAllKnownRegions();
@@ -49,4 +54,5 @@ public class PaymentController {
 //            log.info(a);
 //        }
 //    }
+
 }

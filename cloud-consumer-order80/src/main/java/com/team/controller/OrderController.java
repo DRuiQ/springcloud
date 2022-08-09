@@ -36,6 +36,11 @@ public class OrderController {
      * @PathVariable(“xxx”) 绑定到操作方法的入参中。
      * 一般与@RequestMapping(method = RequestMethod.GET)一起使用
      */
-
+    @GetMapping("/consumer/payment/zipkin")
+    public String paymentZipkin()
+    {
+        String result = restTemplate.getForObject("http://localhost:8001"+"/payment/zipkin/", String.class);
+        return result;
+    }
     }
 
